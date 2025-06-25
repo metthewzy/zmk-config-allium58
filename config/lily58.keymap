@@ -106,9 +106,9 @@
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&trans    &trans &trans &trans  &trans  &trans   &trans   &trans    &trans       &trans    &trans    &trans   &trans    &trans
+&trans    &trans &mmv MOVE_UP &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
+&trans    &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &trans  &msc SCRL_DOWN      &trans      &trans    &trans    &trans   &trans    &trans
+&trans    &trans &trans &trans  &trans  &msc SCRL_UP   &mkp LCLK      &mkp RCLK    &trans       &trans    &trans    &trans   &trans    &trans
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans
             >;
 

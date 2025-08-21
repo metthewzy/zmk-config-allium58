@@ -14,7 +14,7 @@
 #define lower_layer 1
 #define raise_layer 2
 #define adjust_layer 3
-#define extra 4
+#define macro_layer 4
 
 / {
     keymap {

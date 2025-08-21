@@ -53,7 +53,7 @@
 &trans     &trans      &trans    &kp PAGE_UP    &trans      &trans                    &trans          &trans          &kp UP    &trans      &trans  &kp BACKSLASH
 &kp CAPS   &trans      &kp HOME  &kp PAGE_DOWN  &kp END     &trans                    &trans          &kp LEFT        &kp DOWN  &kp RIGHT   &trans  &trans
 &trans     &trans      &trans    &trans         &trans      &trans  &trans    &trans  &trans          &trans          &trans    &trans      &trans  &trans
-                                 &trans         &trans      &to 0   &trans    &trans  &to 3           &trans          &trans
+                                 &trans         &trans      &to 0   &trans    &trans  &to 3           &trans          &kp INS
             >;
         };
 

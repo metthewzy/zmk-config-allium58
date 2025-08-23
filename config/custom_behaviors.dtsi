@@ -1,11 +1,11 @@
 // #include <dt-bindings/zmk/keys.h>
 // #include <behaviors.dtsi>
 
-#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+#define MO_TOG(layer) &mo_tog2 layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 / {
     behaviors {
-        mo_tog: behavior_mo_tog {
+        mo_tog2: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";

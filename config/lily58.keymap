@@ -19,6 +19,8 @@
 
 &mt { tapping-term-ms = <140>; };
 
+&mmv { delay-ms = <200>; };
+
 / {
     behaviors {
         mo_tog: mo_tog {

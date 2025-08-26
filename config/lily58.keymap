@@ -33,6 +33,22 @@
         };
     };
 
+    macros {
+        CAD: CAD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(DEL))>;
+            label = "CAD";
+        };
+
+        PW: PW {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(C) &kp E &kp N7 &kp POUND &kp N2 &kp N0 &kp A &kp N2 &kp N3 &kp N0 &kp N7 &kp N4 &kp N1 &kp N3>;
+            label = "PW";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -123,7 +139,7 @@
             //                      |      |      |      |      |  |      |ADJUST|      |  INS |
 
             bindings = <
-&kp LC(ESC)  &kp LC(F1)  &trans    &trans     &kp LA(F4)  &trans                      &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_MUTE  &trans
+&kp LC(ESC)  &kp LC(F1)  &trans    &trans     &kp LA(F4)  &PW                         &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_MUTE  &CAD
 &trans       &trans      &trans    &kp PG_UP  &trans      &trans                      &trans  &trans      &kp UP    &trans      &trans      &kp BSLH
 &trans       &trans      &kp HOME  &kp PG_DN  &kp END     &trans                      &trans  &kp LEFT    &kp DOWN  &kp RIGHT   &trans      &trans
 &trans       &trans      &trans    &trans     &trans      &trans  &kp CAPS    &trans  &trans  &trans      &trans    &trans      &trans      &trans

@@ -56,11 +56,11 @@
             display-name = "Base";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |   `  |  1  |  2  |  3   |  4   |  5   |                 |  6   |  7   |  8   |  9   |   0  |  -   |
-            // |  TAB |  Q  |  W  |  E   |  R   |  T   |                 |  Y   |  U   |  I   |  O   |   P  |  =   |
-            // | CTRL |  A  |  S  |  D   |  F   |  G   |                 |  H   |  J   |  K   |  L   |   ;  |  '   |
-            // | SHIFT|  Z  |  X  |  C   |  V   |  B   |   "[" |  |  "]" |  N   |  M   |  ,   |  .   |   /  | SHIFT|
-            //                    | ALT  | GUI  | LOWER|  SPACE|  | ENTER| RAISE| BSPC | DEL  |
+            // |  `   |  1   |  2   |  3   |  4   |  5   |                |  6   |  7   |  8   |  9   |  0   |  -   |
+            // | TAB  |  Q   |  W   |  E   |  R   |  T   |                |  Y   |  U   |  I   |  O   |  P   |  =   |
+            // | CTRL |  A   |  S   |  D   |  F   |  G   |                |  H   |  J   |  K   |  L   |  ;   |  '   |
+            // |SHIFT |  Z   |  X   |  C   |  V   |  B   | "["  |  | "]"  |  N   |  M   |  ,   |  .   |  /   |SHIFT |
+            //                      | ALT  | GUI  |LOWER |SPACE |  |ENTER |RAISE | BSPC | DEL  |
 
             bindings = <
 &kp GRAVE         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                              &kp N6       &kp N7    &kp N8     &kp N9   &kp N0    &kp MINUS
@@ -75,9 +75,9 @@
             display-name = "Lower";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC |      |      |      |      |      |                |UNLOCK| PREV |  P/P | NEXT | MUTE |      |
-            // |      |      |      | PGUP |      |      |                |      |      |   ↑  |      |      |   \  |
-            // |      |      | HOME | PGDN | END  |      |                |      |   ←  |   ↓  |   →  |      |      |
+            // |      |      |      |      |      |      |                |UNLOCK| PREV | P/P  | NEXT | MUTE |      |
+            // |      |      |      | PGUP |      |      |                |      |      |  ↑   |      |      |  \   |
+            // |      |      | HOME | PGDN | END  |      |                |      |  ←   |  ↓   |  →   |      |      |
             // |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      |
             //                      |      |      | BASE |      |  |      | BASE |      |      |
 
@@ -94,9 +94,9 @@
             display-name = "Raise";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC |  F1  |  F2  |  F3  |  F4  |  F5  |                |  F6  |  F7  |  F8  |  F9  |  F10 |  F11 |
-            // |      |      |      |  M↑  |  M1  |      |                |      | WHL↑ |   ↑  |      |      |  F12 |
-            // |      |      |  M←  |  M↓  |  M→  |  M3  |                |      |   ←  |   ↓  |   →  |      |      |
+            // |      |  F1  |  F2  |  F3  |  F4  |  F5  |                |  F6  |  F7  |  F8  |  F9  | F10  | F11  |
+            // |      |      |      |  M↑  |  M1  |      |                |      | WHL↑ |  ↑   |      |      | F12  |
+            // |      |      |  M←  |  M↓  |  M→  |  M3  |                |      |  ←   |  ↓   |  →   |      |      |
             // |      |      |      |      |  M2  |      |      |  |      |      | WHL↓ |      |      |      |      |
             //                      |      |      | BASE |      |  |      | BASE |      |      |
 
@@ -132,11 +132,11 @@
             display-name = "Macro";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |  ESC |LC(F1)|      |      |LA(F4)|      |                |UNLOCK| PREV |  P/P | NEXT | MUTE |      |
-            // |      |      |      | PGUP |      |      |                |      |      |   ↑  |      |      |   \  |
-            // |      |      | HOME | PGDN |  END |      |                |      |   ←  |   ↓  |   →  |      |      |
+            // | ESC  |LC(F1)|      |      |LA(F4)|  PW  |                |UNLOCK| PREV | P/P  | NEXT | MUTE |      |
+            // |      |      |      | PGUP |      |      |                |      |      |  ↑   |      |      |  \   |
+            // |      |      | HOME | PGDN | END  |      |                |      |  ←   |  ↓   |  →   |      |      |
             // |      |      |      |      |      |      | CAPS |  |      |      |      |      |      |      |      |
-            //                      |      |      |      |      |  |      |ADJUST|      |  INS |
+            //                      |      |      |      |      |  |      |ADJUST|      | INS  |
 
             bindings = <
 &kp LC(ESC)  &kp LC(F1)  &trans    &trans     &kp LA(F4)  &PW                         &trans  &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_MUTE  &CAD

@@ -13,7 +13,7 @@
 
 #define base_layer   0
 #define lower_layer  1
-#define raise_layer  2
+#define navi_layer  2
 #define adjust_layer 3
 #define macro_layer  4
 
@@ -60,7 +60,7 @@
             // | TAB  |  Q   |  W   |  E   |  R   |  T   |                |  Y   |  U   |  I   |  O   |  P   |  =   |
             // | CTRL |  A   |  S   |  D   |  F   |  G   |                |  H   |  J   |  K   |  L   |  ;   |  '   |
             // |SHIFT |  Z   |  X   |  C   |  V   |  B   | "["  |  | "]"  |  N   |  M   |  ,   |  .   |  /   |SHIFT |
-            //                      | ALT  | GUI  |LOWER |SPACE |  |ENTER |RAISE | BSPC | DEL  |
+            //                      | ALT  | GUI  |LOWER |SPACE |  |ENTER | NAVI | BSPC | DEL  |
 
             bindings = <
 &kp GRAVE         &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                              &kp N6       &kp N7    &kp N8     &kp N9   &kp N0    &kp MINUS
@@ -90,8 +90,8 @@
             >;
         };
 
-        raise_layer {
-            display-name = "Raise";
+        navi_layer {
+            display-name = "Navi";
 
             // ------------------------------------------------------------------------------------------------------------
             // |      |  F1  |  F2  |  F3  |  F4  |  F5  |                |  F6  |  F7  |  F8  |  F9  | F10  | F11  |
@@ -136,7 +136,7 @@
             // |      |      |      | PGUP |      |      |                |      |      |  ↑   |      |      |  \   |
             // |      |      | HOME | PGDN | END  |      |                |      |  ←   |  ↓   |  →   |      |      |
             // |      |      |      |      |      |      | CAPS |  |      |      |      |      |      |      |      |
-            //                      |      |      |      |      |  |      |ADJUST|      | INS  |
+            //                      |      |      |      |      |  |      |      |      | INS  |
 
             bindings = <
 &kp LC(ESC)  &kp LC(F1)  &trans    &trans     &kp LA(F4)  &kp F5                      &PW     &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp C_MUTE  &CAD

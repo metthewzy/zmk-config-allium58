@@ -55,7 +55,7 @@
         PW: PW {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(C) &kp E &kp N7 &kp POUND &kp N2 &kp N0 &kp A &kp N1 &kp N2 &kp N3 &kp N2 &kp N0>;
+            bindings = <&kp LS(C) &kp E &kp N7 &kp POUND &kp N2 &kp N0 &kp A &kp N1 &kp N2 &kp N3 &kp N2 &kp N0 &kp NUMBER_2 &kp N0 &kp NUMBER_6>;
             label = "PW";
         };
     };

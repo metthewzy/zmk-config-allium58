@@ -93,10 +93,10 @@
             //                      |      |      | BASE |      |  |      | BASE |      |      |
 
             bindings = <
-&trans     &trans  &trans          &trans          &trans           &trans                        &trans            &trans     &trans    &trans     &trans  &trans
-&kp GRAVE  &trans  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &trans                        &trans            &kp PG_UP  &kp UP    &kp HOME   &trans  &kp DEL
-&trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_MUTE                    &kp C_PLAY_PAUSE  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &kp BSLH
-&trans     &trans  &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_PREV  &trans    &trans  &kp C_NEXT        &kp PG_DN  &kp INS   &kp END    &trans  &trans
+&trans     &trans  &trans          &trans          &trans           &trans                        &trans            &trans     &trans    &trans     &trans    &trans
+&kp GRAVE  &trans  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &trans                        &trans            &kp PG_UP  &kp UP    &kp HOME   &kp BSLH  &kp DEL
+&trans     &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_MUTE                    &kp C_PLAY_PAUSE  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT  &kp RBKT
+&trans     &trans  &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_PREV  &trans    &trans  &kp C_NEXT        &kp PG_DN  &kp INS   &kp END    &trans    &trans
                                    &trans          &trans           &to 0       &trans    &trans  &to 0             &trans     &trans
             >;
         };
@@ -112,10 +112,10 @@
             //                      |      |      |      |      |  |      | ADJ  |      |      |
 
             bindings = <
-&trans     &trans      &trans          &trans          &trans           &trans                        &trans            &trans     &trans    &trans     &trans  &trans
-&kp GRAVE  &kp LC(F1)  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &kp LA(F4)                    &PW               &kp PG_UP  &kp UP    &kp HOME   &trans  &kp DEL
-&trans     &kp CAPS    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_MUTE                    &kp C_PLAY_PAUSE  &kp LEFT   &kp DOWN  &kp RIGHT  &trans  &kp BSLH
-&trans     &trans      &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_PREV  &trans    &trans  &kp C_NEXT        &kp PG_DN  &kp INS   &kp END    &trans  &trans
+&trans     &trans      &trans          &trans          &trans           &trans                        &trans            &trans     &trans    &trans     &trans    &trans
+&kp GRAVE  &kp LC(F1)  &msc SCRL_UP    &mmv MOVE_UP    &mkp MB1         &kp LA(F4)                    &PW               &kp PG_UP  &kp UP    &kp HOME   &kp BSLH  &kp DEL
+&trans     &kp CAPS    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp C_MUTE                    &kp C_PLAY_PAUSE  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT  &kp RBKT
+&trans     &trans      &msc SCRL_DOWN  &mkp MB3        &mkp MB2         &kp C_PREV  &trans    &trans  &kp C_NEXT        &kp PG_DN  &kp INS   &kp END    &trans    &trans
                                        &trans          &trans           &trans      &trans    &trans  &to 4             &trans     &trans
             >;
         };
@@ -131,11 +131,11 @@
             //                      |      |      | BASE |      |  |      | BASE |      |      |
 
             bindings = <
-&trans     &trans    &trans    &trans     &trans     &trans                          &trans  &trans           &trans          &trans  &trans   &trans
-&kp GRAVE  &kp F1    &kp F2    &kp F3     &kp F4     &kp F5                          &kp F6  &kp F7           &kp F8          &kp F9  &kp F10  &kp F11
-&trans     &kp N1    &kp N2    &kp N3     &kp N4     &kp NUMBER_5                    &kp N6  &hr_mt RCTRL N7  &hr_mt RALT N8  &kp N9  &kp N0   &kp F12
-&trans     &kp LBKT  &kp RBKT  &kp MINUS  &kp EQUAL  &trans        &trans    &trans  &trans  &trans           &trans          &trans  &trans   &trans
-                               &trans     &trans     &to 0         &trans    &trans  &to 0   &trans           &trans
+&trans     &trans  &trans  &trans  &trans  &trans                       &trans  &trans           &trans          &trans  &trans   &trans
+&kp GRAVE  &trans  &kp N7  &kp N8  &kp N9  &kp N0                       &trans  &kp F7           &kp F8          &kp F9  &kp F10  &kp F11
+&trans     &trans  &kp N4  &kp N5  &kp N6  &kp MINUS                    &trans  &hr_mt RCTRL F4  &hr_mt RALT F5  &kp F6  &trans   &kp F12
+&trans     &trans  &kp N1  &kp N2  &kp N3  &kp EQUAL  &trans    &trans  &trans  &kp F1           &kp F2          &kp F3  &trans   &trans
+                           &trans  &trans  &to 0      &trans    &trans  &to 0   &trans           &trans
             >;
         };
 

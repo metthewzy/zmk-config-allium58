@@ -34,6 +34,9 @@ jobs:
           SECRET_MACROS: ${{ secrets.SECRET_MACROS }}
         run: |
           test -n "$SECRET_MACROS"
+          case "$SECRET_MACROS" in
+            *'<'*|*'>'*) echo 'SECRET_MACROS must not include angle brackets' >&2; exit 1 ;;
+          esac
           printf '#define SECRET_MACROS %s\n' "$SECRET_MACROS" > config/secret_macros.dtsi
 
       - name: Initialize ZMK

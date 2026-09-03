@@ -37,7 +37,14 @@ jobs:
           case "$SECRET_MACROS" in
             *'<'*|*'>'*) echo 'SECRET_MACROS must not include angle brackets' >&2; exit 1 ;;
           esac
-          printf '#define SECRET_MACROS %s\n' "$SECRET_MACROS" > config/secret_macros.dtsi
+          {
+            printf 'PW: PW {\n'
+            printf '  compatible = "zmk,behavior-macro";\n'
+            printf '  #binding-cells = <0>;\n'
+            printf '  bindings = <%s>;\n' "$SECRET_MACROS"
+            printf '  label = "PW";\n'
+            printf '};\n'
+          } > config/secret_macros.dtsi
 
       - name: Initialize ZMK
         shell: sh

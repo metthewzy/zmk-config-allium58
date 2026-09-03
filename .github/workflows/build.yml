@@ -1,6 +1,73 @@
-# on: [push, pull_request, workflow_dispatch]
-on: [workflow_dispatch]
+name: Build firmware
+
+on:
+  workflow_dispatch:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    runs-on: ubuntu-latest
+    container: zmkfirmware/zmk-build-arm:stable
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - board: nice_nano_v2
+            shield: lily58_left nice_view_adapter nice_view
+            west_args: -S studio-rpc-usb-uart
+            artifact: lily58_left
+          - board: nice_nano_v2
+            shield: lily58_right nice_view_adapter nice_view
+            west_args: ''
+            artifact: lily58_right
+          - board: nice_nano_v2
+            shield: settings_reset
+            west_args: ''
+            artifact: settings_reset
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject secret macro
+        shell: sh
+        env:
+          SECRET_MACROS: ${{ secrets.SECRET_MACROS }}
+        run: |
+          test -n "$SECRET_MACROS"
+          printf '#define SECRET_MACROS %s\n' "$SECRET_MACROS" > config/secret_macros.dtsi
+
+      - name: Initialize ZMK
+        shell: sh
+        run: |
+          west init -l config
+          west update --fetch-opt=--filter=tree:0
+          west zephyr-export
+
+      - name: Build firmware
+        shell: sh
+        env:
+          BOARD: ${{ matrix.board }}
+          SHIELD: ${{ matrix.shield }}
+          WEST_ARGS: ${{ matrix.west_args }}
+        run: |
+          west build -s zmk/app -d build -b "$BOARD" $WEST_ARGS -- \
+            -DZMK_CONFIG="$GITHUB_WORKSPACE/config" \
+            -DSHIELD="$SHIELD"
+
+      - name: Prepare artifact
+        shell: sh
+        env:
+          ARTIFACT: ${{ matrix.artifact }}
+        run: |
+          mkdir -p artifacts
+          if test -f build/zephyr/zmk.uf2; then
+            cp build/zephyr/zmk.uf2 "artifacts/$ARTIFACT.uf2"
+          else
+            cp build/zephyr/zmk.bin "artifacts/$ARTIFACT.bin"
+          fi
+
+      - name: Upload firmware
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-${{ matrix.artifact }}
+          path: artifacts
